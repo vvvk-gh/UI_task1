@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
   --primary-color: rgb(239, 84, 152);
   --secondary-color: rgb(209, 236, 199);
@@ -12,35 +14,41 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
   color: var(--light-text);
   font-size: 14px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 
 p {
   margin-top: 0;
   font-size: 0.8rem;
+  font-family: 'Roboto', sans-serif;
 }
 h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+h3 {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 li {
   list-style-type: none;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
   box-shadow: 10px 10px 10px 5px var(--grey-bg);
+  font-family: 'Roboto', sans-serif;
 }
 
 header .contactBox {
   padding: 0.6rem;
   width: 100%;
   background-color: var(--primary-color);
-  display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
 }
@@ -78,8 +86,6 @@ svg {
 
 nav ul {
   padding: 1rem;
-  display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
@@ -109,6 +115,7 @@ nav ul > #outlineButton {
 
 main {
   margin: 5rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 section {
@@ -119,65 +126,65 @@ section {
   height: 35vh;
 }
 
+.flex-row {
+  display: flex;
+  direction: row;
+}
+
 .contactBox {
   background-color: var(--primary-color);
 }
 
 /* conformation box */
 
-#confirmationBox {
+.confirmationBox {
   background-color: var(--secondary-color);
   color: var(--success-bg-color);
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-#confirmationBox p {
+.confirmationBox p {
   margin: 1px;
   font-size: 2rem;
 }
 
-#confirmationBox #tick {
+.confirmationBox #tick {
   width: 20%;
 }
 
-#confirmationBox #svgBox {
+.confirmationBox #svgBox {
   height: 100px;
   width: 100px;
   border-radius: 60px;
   background-color: var(--success-bg-color);
 }
 
-#confirmationBox svg {
+.confirmationBox svg {
   display: inline-block;
   width: 40px;
   height: 40px;
   margin: 30px 30px;
   fill: var(--white-text);
 }
-#confirmationBox #message {
+
+.confirmationBox #message {
   width: 70%;
 }
 
-/* bookinghistory section */
+/* bookinghistory box*/
 
-#bookingHistory {
-  display: flex;
+.bookingHistory {
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   height: auto;
 }
 
-#bookingHistory .card {
-  display: flex;
+.card {
   height: 25vh;
-  flex-direction: row;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   width: 48%;
@@ -188,117 +195,11 @@ section {
   transform: 2s ease-in;
 }
 
-#bookingHistory img {
+.card img {
   width: 30%;
-  max-height: 200px;
+  height: 100%;
+  object-fit: cover;
   margin-right: 0.5rem;
-}
-
-/* details box */
-
-#detailsBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: auto;
-  padding: 0rem 0rem 2rem 0rem;
-  border: 2px solid var(--grey-bg);
-  background-color: var(--grey-bg);
-}
-
-#detailsBox .infoBox {
-  width: 35%;
-  height: auto;
-}
-
-.details {
-  font-weight: 600;
-  color: var(--primary-color);
-}
-.details::after {
-  content: ' :  ';
-}
-
-/* appointment Info*/
-
-#appointmentInfo {
-  text-align: center;
-}
-#appointmentInfo a[href] {
-  color: rgb(126, 126, 126);
-  font-weight: bolder;
-}
-
-footer {
-  width: 100%;
-  height: 50vh;
-}
-
-/* subscription box */
-
-#subscriptionBox {
-  padding: 2rem 0rem;
-  width: 100%;
-  position: relative;
-  height: auto;
-  padding-bottom: 3rem;
-  border: 2px solid var(--grey-bg);
-  background-color: var(--grey-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#subscriptionBox #imgWrapper {
-  position: absolute;
-  top: -35px;
-  height: 65px;
-  width: 65px;
-  border-radius: 50px;
-  border: 3px solid var(--grey-bg);
-  background: white;
-}
-
-#imgWrapper img {
-  position: relative;
-  margin: 1.2rem;
-  width: 30px;
-  height: 30px;
-}
-#subscriptionBox h1 {
-  margin-bottom: 0px;
-}
-
-#subscriptionBox form {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  left: 30%;
-}
-
-form input {
-  float: left;
-  padding: 10px 20px;
-  text-align: center;
-  font-family: inherit;
-  font-size: 0.6rem;
-  letter-spacing: 0.05rem;
-  outline: 0;
-}
-
-form input[type='submit'] {
-  border: none;
-  outline: none;
-  width: 10%;
-  background-color: var(--primary-color);
-  color: var(--white-text);
-  padding: 0.8rem;
-  font-weight: bold;
-}
-form input[type='email'] {
-  width: 30%;
-  border: 1px solid grey;
 }
 
 .tooltip {
@@ -327,8 +228,6 @@ form input[type='email'] {
 
 .tooltipBio .bio {
   margin: 10px;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
@@ -357,10 +256,133 @@ form input[type='email'] {
   visibility: visible;
 }
 
+/* details box */
+
+.detailsBox {
+  justify-content: space-around;
+  height: auto;
+  padding: 0rem 0rem 2rem 0rem;
+  border: 2px solid var(--grey-bg);
+  background-color: var(--grey-bg);
+}
+
+.infoBox {
+  width: 35%;
+  height: auto;
+}
+
+.details {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.details::after {
+  content: ' :  ';
+}
+
+/* appointment Info*/
+
+#appointmentInfo {
+  text-align: center;
+}
+
+#appointmentInfo a[href] {
+  color: rgb(126, 126, 126);
+  font-weight: bolder;
+}
+
+footer {
+  width: 100%;
+  height: 50vh;
+}
+
+/* subscription box */
+
+.subscriptionBox {
+  padding: 2rem 0rem;
+  width: 100%;
+  position: relative;
+  height: auto;
+  padding-bottom: 3rem;
+  border: 2px solid var(--grey-bg);
+  background-color: var(--grey-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscriptionBox #imgWrapper {
+  position: absolute;
+  top: -35px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50px;
+  border: 3px solid var(--grey-bg);
+  background: white;
+}
+
+#imgWrapper img {
+  position: relative;
+  margin: 1.2rem;
+  width: 30px;
+  height: 30px;
+}
+.subscriptionBox h1 {
+  margin-bottom: 0px;
+}
+
+.subscriptionBox form {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  left: 30%;
+}
+
+form input {
+  float: left;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.05rem;
+  outline: 0;
+}
+
+form input[type='submit'] {
+  border: none;
+  outline: none;
+  width: 10%;
+  background-color: var(--primary-color);
+  color: var(--white-text);
+  padding: 0.8rem;
+  font-weight: bold;
+}
+
+form input[type='email'] {
+  width: 30%;
+  border: 1px solid grey;
+}
+
 /* from 600px width screen to 850 width screen  */
 @media only screen and (max-width: 850px) {
-  :root {
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--light-text);
     font-size: 11px;
+    overflow-x: hidden;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1rem;
   }
 
   header .logo {
@@ -403,9 +425,7 @@ form input[type='email'] {
 
   nav ul {
     padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -413,7 +433,7 @@ form input[type='email'] {
     font-weight: normal;
     color: black;
     background-color: rgba(0, 0, 0, 0.02);
-    padding: 0.4rem;
+    padding: 0.8rem;
     margin: 0rem 0.6rem;
     border-radius: 2px;
   }
@@ -433,13 +453,48 @@ form input[type='email'] {
     color: var(--primary-color);
   }
 
-  #subscriptionBox form {
-    left: 20%;
+  .confirmationBox {
+    background-color: var(--secondary-color);
+    color: var(--success-bg-color);
+    justify-content: center;
+    align-items: center;
   }
 
-  form {
-    margin-left: 10%;
+  .confirmationBox p {
+    font-size: 1.5rem;
   }
+
+  .confirmationBox #tick {
+    width: 20%;
+  }
+
+  .confirmationBox #svgBox {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    background-color: var(--success-bg-color);
+  }
+
+  .confirmationBox svg {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 20px 20px;
+    fill: var(--white-text);
+  }
+
+  .confirmationBox #message {
+    width: 70%;
+  }
+
+  .subscriptionBox form {
+    left: 30%;
+  }
+  .subscriptionBox h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
   form input[type='submit'] {
     padding: 1rem;
   }
@@ -449,10 +504,25 @@ form input[type='email'] {
   }
 }
 
-/* from 0px width screen to 600px width screen */
-@media only screen and (max-width: 600px) {
-  :root {
+/* from 0px width screen to 560px width screen */
+@media only screen and (max-width: 560px) {
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--light-text);
     font-size: 10px;
+    overflow-x: hidden;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 1rem;
   }
 
   main {
@@ -461,29 +531,34 @@ form input[type='email'] {
 
   header .contactBox {
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     background-color: var(--primary-color);
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
 
+  .contactBox svg {
+    width: 8px;
+    height: 8px;
+  }
+
   nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
   nav ul li {
+    width: 90%;
+    text-align: center;
     cursor: pointer;
     font-weight: normal;
     color: black;
     font-size: 0.9rem;
     background-color: rgba(0, 0, 0, 0.02);
-    padding: 0.4rem;
+    padding: 0.9rem;
     margin: 0.3rem 0.3rem;
     border-radius: 2px;
   }
@@ -493,41 +568,42 @@ form input[type='email'] {
     height: 12px;
   }
 
-  #confirmationBox {
+  .confirmationBox {
     justify-content: space-around;
     align-items: center;
     height: 25vh;
   }
 
-  #confirmationBox p {
+  .confirmationBox p {
     font-size: 1.5rem;
   }
 
-  #confirmationBox #svgBox {
+  .confirmationBox #svgBox {
     height: 50px;
     width: 50px;
     border-radius: 25px;
   }
 
-  #confirmationBox svg {
+  .confirmationBox svg {
     width: 24px;
     height: 24px;
-    margin: 10px 12px;
+    margin: 13px;
   }
 
-  #bookingHistory {
+  .bookingHistory {
     height: 50vh;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
   }
-  #bookingHistory .card {
+  .card {
     height: 20vh;
     width: 80%;
   }
 
-  #bookingHistory img {
+  .card img {
+    width: 40%;
     margin-right: 0.7rem;
   }
 
@@ -544,7 +620,10 @@ form input[type='email'] {
     margin-left: -50px;
   }
 
-  #subscriptionBox #imgWrapper {
+  .subscriptionBox h1 {
+    font-size: 1.2rem;
+  }
+  .subscriptionBox #imgWrapper {
     position: absolute;
     top: -2rem;
     height: 4rem;
@@ -560,8 +639,9 @@ form input[type='email'] {
     width: 2rem;
     height: 2rem;
   }
-  #subscriptionBox form {
-    left: 10%;
+
+  .subscriptionBox form {
+    left: 12%;
   }
 
   footer {
